@@ -1,34 +1,40 @@
 #include <stdio.h>
 
-//torre horizontal ou vertical 5 casas para a direita
-//bispo 5 casas para direita na diagonal
-//rainha 8 casas para a esquerda
-int main () {
-    int torre = 1; //while
-    int bispo = 5; //for
-    int rainha = 1;// do while
+void torre(){
+  for (int i = 0; i < 4; ++i){
+    printf("Direita\n");
+  }
+}
 
-    printf("Torre:\n");
-    while(torre <= 5){
-      printf("uma casa para a direita\n");
-      ++torre;
-    }
-    
-    printf("\n\n------------------------------------------------\n\n");
-    
-    printf("Bispo:\n");
-    for(int i = 0;i != bispo;++i){
-      printf("uma casa para cima e uma para a direita\n");
-    }
-    
-    printf("\n\n------------------------------------------------\n\n");
+void bispo(){
+  for(int i = 0; i < 4; ++i){
+    printf("Cima\nDireita\n");
+  }
+}
 
-    printf("Rainha:\n");
-    do{
+void rainha(){
+  for(int i = 0; i < 4; ++i){
+    printf("Esquerda\n");
+  }
+}
 
-      printf("Uma casa para a esquerda\n");
-      ++rainha;
-    }while(rainha != 5);
+void cavalo(){
+  for(int i = 0; i < 2; ++i){
+    printf("Cima\n");
+      if( i == 1){
+        printf("Direita\n");
+      }
+  }
+}
 
+int main() {
+  printf("\n\nTorre:\n");
+    torre();
+  printf("\n\nBispo:\n");
+    bispo();
+  printf("\n\nRainha:\n");
+    rainha();
+  printf("\n\nCavalo:\n");
+    cavalo();
   return 0;
 }
